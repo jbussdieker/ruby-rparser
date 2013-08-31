@@ -22,19 +22,19 @@ class Parser < Racc::Parser
 ##### State transition tables begin ###
 
 racc_action_table = [
-     4,     5,     4,     7,     8 ]
+     5,     3,     5,     6,     8,     9 ]
 
 racc_action_check = [
-     0,     1,     2,     4,     5 ]
+     0,     0,     2,     1,     5,     6 ]
 
 racc_action_pointer = [
-    -2,     1,     0,   nil,     0,     4,   nil,   nil,   nil ]
+    -2,     3,     0,   nil,   nil,     1,     5,   nil,   nil,   nil ]
 
 racc_action_default = [
-    -6,    -6,    -1,    -3,    -4,    -6,    -2,    -5,     9 ]
+    -1,    -8,    -2,    -4,    -5,    -6,    -8,    -3,    -7,    10 ]
 
 racc_goto_table = [
-     3,     2,     6,     1 ]
+     4,     2,     7,     1 ]
 
 racc_goto_check = [
      3,     2,     3,     1 ]
@@ -47,15 +47,17 @@ racc_goto_default = [
 
 racc_reduce_table = [
   0, 0, :racc_error,
-  1, 5, :_reduce_1,
+  0, 5, :_reduce_none,
+  1, 5, :_reduce_none,
   2, 6, :_reduce_none,
+  1, 6, :_reduce_none,
   1, 6, :_reduce_none,
   1, 7, :_reduce_none,
   2, 7, :_reduce_none ]
 
-racc_reduce_n = 6
+racc_reduce_n = 8
 
-racc_shift_n = 9
+racc_shift_n = 10
 
 racc_token_table = {
   false => 0,
@@ -99,10 +101,7 @@ Racc_debug_parser = false
 
 # reduce 0 omitted
 
-def _reduce_1(val, _values, result)
- puts "Z DOC #{val}" 
-    result
-end
+# reduce 1 omitted
 
 # reduce 2 omitted
 
@@ -111,6 +110,10 @@ end
 # reduce 4 omitted
 
 # reduce 5 omitted
+
+# reduce 6 omitted
+
+# reduce 7 omitted
 
 def _reduce_none(val, _values, result)
   val[0]
