@@ -10,19 +10,19 @@ module Rparser
 ##### State transition tables begin ###
 
 racc_action_table = [
-     4,     5,     4,     5,     6,     8 ]
+     5,     3,     5,     6,     8,     9 ]
 
 racc_action_check = [
-     0,     0,     2,     2,     1,     6 ]
+     0,     0,     2,     1,     5,     6 ]
 
 racc_action_pointer = [
-    -2,     4,     0,   nil,   nil,   nil,     5,   nil,   nil ]
+    -2,     3,     0,   nil,   nil,     1,     5,   nil,   nil,   nil ]
 
 racc_action_default = [
-    -1,    -7,    -2,    -4,    -5,    -6,    -7,    -3,     9 ]
+    -1,    -8,    -2,    -4,    -5,    -6,    -8,    -3,    -7,    10 ]
 
 racc_goto_table = [
-     3,     2,     7,     1 ]
+     4,     2,     7,     1 ]
 
 racc_goto_check = [
      3,     2,     3,     1 ]
@@ -39,12 +39,13 @@ racc_reduce_table = [
   1, 5, :_reduce_none,
   2, 6, :_reduce_3,
   1, 6, :_reduce_none,
+  1, 6, :_reduce_none,
   1, 7, :_reduce_none,
-  1, 7, :_reduce_none ]
+  2, 7, :_reduce_7 ]
 
-racc_reduce_n = 7
+racc_reduce_n = 8
 
-racc_shift_n = 9
+racc_shift_n = 10
 
 racc_token_table = {
   false => 0,
@@ -102,6 +103,11 @@ end
 # reduce 5 omitted
 
 # reduce 6 omitted
+
+def _reduce_7(val, _values, result)
+ return val[0] + val[1] 
+    result
+end
 
 def _reduce_none(val, _values, result)
   val[0]
