@@ -6,12 +6,12 @@ class Rparser::Parser
       | lines
       ;
     lines
-      : lines line
+      : lines line { return val[0] + val[1] }
       | NEWLINE
       | line
       ;
     line
       : LINE
-      | LINE NEWLINE
+      | LINE NEWLINE { return val[0] + val[1] }
       ;
 end
