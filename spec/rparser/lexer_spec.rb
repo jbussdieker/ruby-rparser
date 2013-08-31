@@ -1,8 +1,9 @@
-require 'lexer'
+require 'spec_helper'
+require 'rparser/lexer'
 
 describe "Lexer" do
   before do
-    @lexer = Parser.new
+    @lexer = Rparser::Parser.new
   end
 
   def tokenize(text)

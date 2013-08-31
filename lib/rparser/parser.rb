@@ -5,7 +5,8 @@
 #
 
 require 'racc/parser.rb'
-class Parser < Racc::Parser
+module Rparser
+  class Parser < Racc::Parser
 ##### State transition tables begin ###
 
 racc_action_table = [
@@ -106,4 +107,5 @@ def _reduce_none(val, _values, result)
   val[0]
 end
 
-end   # class Parser
+  end   # class Parser
+  end   # module Rparser

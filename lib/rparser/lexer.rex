@@ -1,4 +1,4 @@
-class Parser
+class Rparser::Parser
 macro
   LINE        .+
   NEWLINE     \n

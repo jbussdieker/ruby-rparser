@@ -10,6 +10,6 @@ rule '.rb' => '.rex' do |t|
   sh "rex -o #{t.name} #{t.source}"
 end
 
-task :compile => ['lib/parser.rb', 'lib/lexer.rb']
+task :compile => ['lib/rparser/parser.rb', 'lib/rparser/lexer.rb']
 
 task :test => [:compile, :spec]

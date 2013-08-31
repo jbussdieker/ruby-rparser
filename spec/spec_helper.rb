@@ -1,6 +1,6 @@
-require 'parser'
+require 'rparser/parser'
 
-class ParserMock < Parser
+class ParserMock < Rparser::Parser
   attr_accessor :tokens
 
   def initialize(tokens)
