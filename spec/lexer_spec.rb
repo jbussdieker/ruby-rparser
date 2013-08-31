@@ -1,8 +1,8 @@
 require 'lexer'
 
-describe Lexer do
+describe "Lexer" do
   before do
-    @lexer = Lexer.new
+    @lexer = Parser.new
   end
 
   def tokenize(text)

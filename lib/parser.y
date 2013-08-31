@@ -15,16 +15,3 @@ class Parser
       | LINE NEWLINE
       ;
 end
----- inner
-  def initialize(tokenizer)
-    @tokenizer = tokenizer
-    super()
-  end
-
-  def parse
-    do_parse
-  end
-
-  def next_token
-    @tokenizer.next_token
-  end

@@ -5,7 +5,7 @@
 #++
 
 require 'racc/parser'
-class Lexer < Racc::Parser
+class Parser < Racc::Parser
   require 'strscan'
 
   class ScanError < StandardError ; end

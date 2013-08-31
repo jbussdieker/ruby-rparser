@@ -1,4 +1,4 @@
-class Lexer
+class Parser
 macro
   LINE        .+
   NEWLINE     \n

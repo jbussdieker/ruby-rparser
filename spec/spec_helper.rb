@@ -1,4 +1,6 @@
-class LexerMock
+require 'parser'
+
+class ParserMock < Parser
   attr_accessor :tokens
 
   def initialize(tokens)
@@ -7,5 +9,9 @@ class LexerMock
 
   def next_token
     @tokens.shift
+  end
+
+  def parse
+    do_parse
   end
 end

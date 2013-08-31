@@ -6,19 +6,6 @@
 
 require 'racc/parser.rb'
 class Parser < Racc::Parser
-
-  def initialize(tokenizer)
-    @tokenizer = tokenizer
-    super()
-  end
-
-  def parse
-    do_parse
-  end
-
-  def next_token
-    @tokenizer.next_token
-  end
 ##### State transition tables begin ###
 
 racc_action_table = [
