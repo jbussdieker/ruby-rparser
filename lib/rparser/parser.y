@@ -2,7 +2,7 @@ class Rparser::Parser
   token LINE NEWLINE
   rule
     document
-      : 
+      : { return "" }
       | lines
       ;
     lines

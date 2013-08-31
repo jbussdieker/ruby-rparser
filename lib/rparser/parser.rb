@@ -35,7 +35,7 @@ racc_goto_default = [
 
 racc_reduce_table = [
   0, 0, :racc_error,
-  0, 5, :_reduce_none,
+  0, 5, :_reduce_1,
   1, 5, :_reduce_none,
   2, 6, :_reduce_3,
   1, 6, :_reduce_none,
@@ -89,7 +89,10 @@ Racc_debug_parser = false
 
 # reduce 0 omitted
 
-# reduce 1 omitted
+def _reduce_1(val, _values, result)
+ return "" 
+    result
+end
 
 # reduce 2 omitted
 
